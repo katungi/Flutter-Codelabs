@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Start Up Generator',
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title:  Text('Welcome to Flutter'), 
@@ -18,4 +19,23 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+}
+
+
+
+class RandomWordsState extends State<RandomWords> {
+ 
+  @override
+  Widget build(BuildContext context) {
+
+    
+    final WordPair wordPair = WordPair.random();
+    return Text(WordPair.random().asPascalCase);
+  }
+
+}
+
+class RandomWords extends StatefulWidget {
+  @override
+  RandomWordsState createState() => RandomWordsState();
 }
