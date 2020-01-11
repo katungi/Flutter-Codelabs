@@ -28,9 +28,10 @@ class RandomWordsState extends State<RandomWords> {
   @override
   Widget build(BuildContext context) {
 
-    
-    final WordPair wordPair = WordPair.random();
-    return Text(WordPair.random().asPascalCase);
+    final List<WordPair> _suggestions = <WordPair>[];
+    final TextStyle _biggerFont = const TextStyle(fontSize: 18);
+    // final WordPair wordPair = WordPair.random();
+    // return Text(WordPair.random().asPascalCase);
   }
 
 }
@@ -39,3 +40,4 @@ class RandomWords extends StatefulWidget {
   @override
   RandomWordsState createState() => RandomWordsState();
 }
+
